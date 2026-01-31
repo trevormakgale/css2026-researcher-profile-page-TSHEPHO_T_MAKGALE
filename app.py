@@ -63,7 +63,7 @@ weather_data = pd.DataFrame({
 
 # Sections based on menu selection
 if menu == "RESEARCH PROFILE":
-    st.title("RESEARCH PROFILE: INTERACTIVEPOSTER")
+    st.title("RESEARCH PROFILE: INTERACTIVE POSTER")
     st.sidebar.header("Profile Options")
 
     # Collect basic information
