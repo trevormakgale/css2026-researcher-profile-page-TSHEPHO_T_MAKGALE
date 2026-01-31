@@ -16,10 +16,10 @@ import numpy as np
 
 # Set page title
 st.set_page_config(
-    page_title="Researcher Profile and STEM Data Explorer",
-    page_icon="🔬",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_title= "Researcher Profile and STEM Data Explorer",
+    page_icon= "🔬",
+    layout= "wide",
+    initial_sidebar_state= "expanded"
 )
 
 
