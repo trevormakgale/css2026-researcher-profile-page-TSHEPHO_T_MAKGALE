@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -14,19 +15,25 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
+# =========================================================================
+#                                       RAGE
+# =========================================================================
+
 # Set page title
 st.set_page_config(
     page_title= "Researcher Profile and STEM Data Explorer",
     page_icon= "🔬",
     layout= "wide"
 )
+# =========================================================================
 
 
 # Sidebar Menu
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Publications", "STEM Data Explorer", "Contact"],
+    ["RESEARCH PROFILE","RESULTS","PUBLICATIONS","CONTACTS"],
 )
 
 # Dummy STEM data
@@ -49,9 +56,14 @@ weather_data = pd.DataFrame({
     "Recorded Date": pd.date_range(start="2024-01-01", periods=5),
 })
 
+# =========================================================================
+#                                       FRONT: TITLE PAGE
+# =========================================================================
+
+
 # Sections based on menu selection
-if menu == "Researcher Profile":
-    st.title("Researcher Profile")
+if menu == "RESEARCH PROFILE":
+    st.title("RESEARCH PROFILE")
     st.sidebar.header("Profile Options")
 
     # Collect basic information
@@ -66,12 +78,16 @@ if menu == "Researcher Profile":
     st.markdown("**Department:** Physics")
     
     st.image(
-    "image1.png",
+    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
     caption="Nature (Pixabay)"
 )
+    
+# =========================================================================
+#                                       PUBLICATIONS
+# =========================================================================
 
-elif menu == "Publications":
-    st.title("Publications")
+elif menu == "PUBLICATIONS":
+    st.title("PUBLICATIONS")
     st.sidebar.header("Upload and Filter")
 
     # Upload publications file
@@ -99,18 +115,22 @@ elif menu == "Publications":
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
 
-elif menu == "STEM Data Explorer":
-    st.title("STEM Data Explorer")
-    st.sidebar.header("Data Selection")
+
+# =========================================================================
+#                                       RESULTS
+# =========================================================================
+elif menu == "RESULTS":
+    st.title("SRESULTS")
+    st.sidebar.header("RESULT Selection")
     
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
         "Choose a dataset to explore", 
-        ["Physics Experiments", "Astronomy Observations", "Weather Data"]
+        ["Silver (Ag) Nanocomposites", "Gold (Au) Nanocomposites", "Blended Ag-Au Nanocomposites"]
     )
 
-    if data_option == "Physics Experiments":
-        st.write("### Physics Experiment Data")
+    if data_option == "Silver (Ag) Nanocomposites":
+        st.write("### Silver (Ag) Nanocomposites")
         st.dataframe(physics_data)
         # Add widget to filter by Energy levels
         energy_filter = st.slider("Filter by Energy (MeV)", 0.0, 10.0, (0.0, 10.0))
@@ -120,8 +140,8 @@ elif menu == "STEM Data Explorer":
         st.write(f"Filtered Results for Energy Range {energy_filter}:")
         st.dataframe(filtered_physics)
 
-    elif data_option == "Astronomy Observations":
-        st.write("### Astronomy Observation Data")
+    elif data_option == "Gold (Au) Nanocomposites":
+        st.write("### Gold (Au) Nanocomposites")
         st.dataframe(astronomy_data)
         # Add widget to filter by Brightness
         brightness_filter = st.slider("Filter by Brightness (Magnitude)", -15.0, 5.0, (-15.0, 5.0))
@@ -131,8 +151,8 @@ elif menu == "STEM Data Explorer":
         st.write(f"Filtered Results for Brightness Range {brightness_filter}:")
         st.dataframe(filtered_astronomy)
 
-    elif data_option == "Weather Data":
-        st.write("### Weather Data")
+    elif data_option == "Blended Ag-Au Nanocomposites":
+        st.write("### Blended Ag-Au Nanocomposites")
         st.dataframe(weather_data)
         # Add widgets to filter by temperature and humidity
         temp_filter = st.slider("Filter by Temperature (°C)", -10.0, 40.0, (-10.0, 40.0))
@@ -144,9 +164,12 @@ elif menu == "STEM Data Explorer":
         st.write(f"Filtered Results for Temperature {temp_filter} and Humidity {humidity_filter}:")
         st.dataframe(filtered_weather)
         
-        
+# =========================================================================
+#                                       CONTACTS
+# =========================================================================
+       
 
-elif menu == "Contact":
+elif menu == "CONSTACTS":
     # Add a contact section
     st.header("Contact Information")
     email = "u14007739@tuks.co.za"
