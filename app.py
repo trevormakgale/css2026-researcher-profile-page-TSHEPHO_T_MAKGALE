@@ -22,7 +22,7 @@ import numpy as np
 
 # Set page title
 st.set_page_config(
-    page_title= "Researcher Profile and STEM Data Explorer",
+    page_title= "Researcher Profile: Poster",
     page_icon= "🔬",
     layout= "wide"
 )
@@ -78,7 +78,7 @@ if menu == "RESEARCH PROFILE":
     st.markdown("**Department:** Physics")
     
     st.image(
-    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    "Solar-Materials.png",
     caption="Nature (Pixabay)"
 )
     
