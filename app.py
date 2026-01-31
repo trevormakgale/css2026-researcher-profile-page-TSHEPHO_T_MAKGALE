@@ -22,7 +22,7 @@ import numpy as np
 
 # Set page title
 st.set_page_config(
-    page_title= "Researcher Profile: Poster",
+    page_title= "Researcher Profile: Interactive Poster",
     page_icon= "🔬",
     layout= "wide"
 )
@@ -63,7 +63,7 @@ weather_data = pd.DataFrame({
 
 # Sections based on menu selection
 if menu == "RESEARCH PROFILE":
-    st.title("RESEARCH PROFILE: POSTER")
+    st.title("RESEARCH PROFILE: INTERACTIVEPOSTER")
     st.sidebar.header("Profile Options")
 
     # Collect basic information
