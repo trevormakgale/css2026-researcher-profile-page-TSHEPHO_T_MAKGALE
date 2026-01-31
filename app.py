@@ -67,7 +67,7 @@ if menu == "RESEARCH PROFILE":
     st.sidebar.header("Profile Options")
 
     # Collect basic information
-    name = "Mr Tshepho Trevor Makgale"
+    name = "(Mr) Tshepho Trevor Makgale"
     field = "Solar Material Science"
     institution = "University of Pretoria"
 
@@ -120,12 +120,12 @@ elif menu == "PUBLICATIONS":
 #                                       RESULTS
 # =========================================================================
 elif menu == "RESULTS":
-    st.title("SRESULTS")
+    st.title("RESULTS")
     st.sidebar.header("RESULT Selection")
     
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
-        "Choose a dataset to explore", 
+        "Choose MATERIAL TYPE to explore", 
         ["Silver (Ag) Nanocomposites", "Gold (Au) Nanocomposites", "Blended Ag-Au Nanocomposites"]
     )
 
@@ -180,7 +180,7 @@ elif menu == "CONSTACTS":
 st.markdown("---")
 footer_cols = st.columns(3)
 with footer_cols[0]:
-    st.markdown("**CSS-2026 Research Profile**")
+    st.markdown("**CSS-2026 Research Profile| Interactive Research Poster SAIP 2024**")
 with footer_cols[1]:
     st.markdown("© 2026 Coding Summer School 2026")
 with footer_cols[2]:
