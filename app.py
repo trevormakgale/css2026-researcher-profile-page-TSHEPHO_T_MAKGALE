@@ -18,8 +18,7 @@ import numpy as np
 st.set_page_config(
     page_title= "Researcher Profile and STEM Data Explorer",
     page_icon= "🔬",
-    layout= "wide",
-    initial_sidebar_state= "expanded"
+    layout= "wide"
 )
 
 
@@ -64,6 +63,7 @@ if menu == "Researcher Profile":
     st.write(f"**Name:** {name}")
     st.write(f"**Field of Research:** {field}")
     st.write(f"**Institution:** {institution}")
+    st.markdown("**Department:** Physics")
     
     st.image(
     "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
@@ -151,11 +151,13 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "u14007739@tuks.co.za"
     st.write(f"You can reach me at {email}.")
+    st.markdown("**ORCID:** 0000-0002-4444-8881")
+    
     # Footer
 st.markdown("---")
 footer_cols = st.columns(3)
 with footer_cols[0]:
-    st.markdown("**CSS2026 Research Profile**")
+    st.markdown("**CSS-2026 Research Profile**")
 with footer_cols[1]:
     st.markdown("© 2026 Coding Summer School 2026")
 with footer_cols[2]:
