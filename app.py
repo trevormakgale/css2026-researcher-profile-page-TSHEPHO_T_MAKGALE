@@ -151,3 +151,12 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "u14007739@tuks.co.za"
     st.write(f"You can reach me at {email}.")
+    # Footer
+st.markdown("---")
+footer_cols = st.columns(3)
+with footer_cols[0]:
+    st.markdown("**CSS2026 Research Profile**")
+with footer_cols[1]:
+    st.markdown("© 2026 Coding Summer School 2026")
+with footer_cols[2]:
+    st.markdown("Last updated: January 2026")
