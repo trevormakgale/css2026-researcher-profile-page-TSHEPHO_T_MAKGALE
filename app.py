@@ -66,7 +66,7 @@ if menu == "Researcher Profile":
     st.markdown("**Department:** Physics")
     
     st.image(
-    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    "https://github.com/trevormakgale/css2026-researcher-profile-page-TSHEPHO_T_MAKGALE/blob/main/image1.png",
     caption="Nature (Pixabay)"
 )
 
