@@ -33,7 +33,7 @@ st.set_page_config(
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["RESEARCH PROFILE","RESULTS","PUBLICATIONS","CONTACTS"],
+    ["RESEARCH PROFILE", "INTRODUCTION and METHODS", "RESULTS", "PUBLICATIONS", "CONTACTS"],
 )
 
 # Dummy STEM data
@@ -69,7 +69,11 @@ if menu == "RESEARCH PROFILE":
     # Collect basic information
     name = "(Mr) Tshepho Trevor Makgale"
     field = "Solar Material Science"
-    institution = "University of Pretoria"
+    institution = """ University of Pretoria,
+                      Private Bag X20, 
+                      Hatfield 0028, 
+                      South Africa
+                 """
 
     # Display basic profile information
     st.write(f"**Name:** {name}")
@@ -82,6 +86,38 @@ if menu == "RESEARCH PROFILE":
     caption="Nature (Pixabay)"
 )
     
+# =========================================================================
+#                                       INTRODUCTION and METHODS
+# =========================================================================
+
+
+# Sections based on menu selection
+elif menu == "INTRODUCTION and METHODS":
+    st.title("INTRODUCTION and METHODS")
+    st.sidebar.header("Profile Options")
+
+    # Research information
+   text = """
+Solar steam generation (SSG), which harnesses the abundant and clean energy of sunlight, has emerged as one of the most promising technologies in addressing global freshwater scarcity [1].
+One of the important applications of SSG is in water purification and desalination, which are processes critical to ensuring access to clean water. However, traditional SSG systems, which rely
+on sunlight to directly heat the entire bulk water, suffer from low solar energy conversion efficiency and result in insufficient bulk water temperatures [2, 3]. To overcome these limitations, re-
+searchers have explored a variety of solar absorbers including metallic nanomaterials [4], carbon-based materials [5], semiconductors, and polymers to develop more efficient, modern solar-
+driven evaporation systems. A particularly promising approach involves nanofluid-based SSG systems, where plasmonic noble metals like gold (Au) and silver (Ag) serve as direct-absorption
+solar energy collectors. In this study, Au and Ag nanostructures were coated with tin dioxide (SnO2), and their blended mixtures were assessed to develop enhanced photothermal materials for
+solar steam generation.
+
+
+
+   """
+
+    # Display basic profile information
+    st.write(f"**Introduction:** {text}")
+    st.markdown("**Department:** Department of Physics")
+    
+    st.image(
+    "Solar-Materials.png",
+    caption="Nature (Pixabay)"
+)    
 # =========================================================================
 #                                       PUBLICATIONS
 # =========================================================================
