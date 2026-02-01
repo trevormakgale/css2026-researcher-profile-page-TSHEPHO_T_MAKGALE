@@ -210,7 +210,7 @@ elif menu == "RESULTS":
 # =========================================================================
        
 
-    elif menu == "CONSTACTS":
+    elif menu == "CONTACTS":
         # Add a contact section
         st.header("Contact Information")
         email = "u14007739@tuks.co.za"
