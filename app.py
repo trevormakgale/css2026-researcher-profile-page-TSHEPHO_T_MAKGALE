@@ -210,12 +210,12 @@ elif menu == "RESULTS":
 # =========================================================================
        
 
-elif menu == "CONSTACTS":
-    # Add a contact section
-    st.header("Contact Information")
-    email = "u14007739@tuks.co.za"
-    st.write(f"You can reach me at {email}.")
-    st.markdown("**ORCID:** 0000-0002-4444-8881")
+    elif menu == "CONSTACTS":
+        # Add a contact section
+        st.header("Contact Information")
+        email = "u14007739@tuks.co.za"
+        st.write(f"You can reach me at {email}.")
+        st.markdown("**ORCID:** 0000-0002-4444-8881")
     
     # Footer
 st.markdown("---")
