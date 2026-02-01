@@ -66,7 +66,7 @@ if menu == "RESEARCH PROFILE":
     st.title("RESEARCH PROFILE: INTERACTIVE POSTER")
     st.sidebar.header("Profile Options")
 
-    # Collect basic information
+    # Collect basic information 
     name = "(Mr) Tshepho Trevor Makgale"
     field = "Solar Material Science"
     institution = " University of Pretoria, Private Bag X20, Hatfield 0028, South Africa"
