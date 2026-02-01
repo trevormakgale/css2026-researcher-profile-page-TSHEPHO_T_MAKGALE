@@ -107,13 +107,13 @@ elif menu == "INTRODUCTION and METHODS":
     
     st.image(
     "Intro.png",
-    caption="Nature (Pixabay)"
+    caption="Nature (Pixabay)")
 
     st.image(
     "Methods.png",
-    caption="Nature (Pixabay)"
+    caption="Nature (Pixabay)")
         
-)    
+    
 # =========================================================================
 #                                       PUBLICATIONS
 # =========================================================================
