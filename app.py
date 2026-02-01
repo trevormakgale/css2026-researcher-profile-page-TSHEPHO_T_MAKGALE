@@ -17,7 +17,7 @@ import numpy as np
 
 
 # =========================================================================
-#                                       RAGE
+#                                       PAGE
 # =========================================================================
 
 # Set page title
@@ -101,17 +101,18 @@ elif menu == "INTRODUCTION and METHODS":
     solar energy collectors. In this study, Au and Ag nanostructures were coated with tin dioxide (SnO2), and their blended mixtures were assessed to develop enhanced photothermal materials for
     solar steam generation.'''
 
-
-
-   
-
     # Display basic profile information
     st.write(f"**Introduction:** {text}")
     st.markdown("**Department:** Department of Physics")
     
     st.image(
-    "intro.png",
+    "Intro.png",
     caption="Nature (Pixabay)"
+
+    st.image(
+    "Methods.png",
+    caption="Nature (Pixabay)"
+        
 )    
 # =========================================================================
 #                                       PUBLICATIONS
