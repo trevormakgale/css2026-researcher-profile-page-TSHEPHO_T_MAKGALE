@@ -102,13 +102,15 @@ elif menu == "INTRODUCTION and METHODS":
     solar steam generation.'''
 
     # Display basic profile information
-    st.write(f"**Introduction:** {text}")
-    st.markdown("**Department:** Department of Physics")
+    st.write(f'''**Introduction:** 
+                    {text}''')
+    
     
     st.image(
     "Intro.png",
     caption="Nature (Pixabay)")
-
+    
+    st.markdown("**Methods:**")
     st.image(
     "Methods.png",
     caption="Nature (Pixabay)")
