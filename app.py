@@ -79,8 +79,15 @@ if menu == "RESEARCH PROFILE":
     
     st.image(
     "Solar-Materials.png",
-    caption="Nature (Pixabay)"
-)
+    caption="Nature (Pixabay)")
+
+    text = ''' I am a postgraduate researcher in the physical sciences with a strong focus on nanomaterials, photocatalysis, and solar energy conversion. 
+    My current research explores carbon-based and plasmonic hybrid nanostructures for applications in photocatalytic hydrogen production, carbon dioxide 
+    reduction, and solar steam generation. I am particularly interested in understanding and modelling the underlying mechanisms that govern charge transfer, 
+    light–matter interactions, and reaction kinetics at the nanoscale.
+    '''
+    # Display basic profile information
+    st.write(f"**Researcher Profile:** {text}")
     
 # =========================================================================
 #                                       INTRODUCTION and METHODS
