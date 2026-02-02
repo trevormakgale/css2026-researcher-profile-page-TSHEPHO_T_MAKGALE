@@ -164,7 +164,7 @@ elif menu == "RESULTS and DISCUSSION":
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
         "Choose MATERIAL TYPE to explore", 
-        ["Silver (Ag) Nanocomposites", "Gold (Au) Nanocomposites", "Blended Ag-Au Nanocomposites"]
+        ["Silver (Ag) Nanocomposites", "Gold (Au) Nanocomposites", "Blended Ag-Au Nanocomposites", "CONCLUSION"]
     )
 
     if data_option == "Silver (Ag) Nanocomposites":
@@ -214,7 +214,16 @@ elif menu == "RESULTS and DISCUSSION":
         st.write(f'''**Discussion:** 
                     {Ag_Ag_text}''')
         
+    elif data_option == "CONCLUSION":
+        st.write("### CONCLUSION")
          
+        st.write('''This study demonstrated that encapsulating silver and gold nanorods with tin dioxide (SnO₂) significantly enhanced their optical and thermal properties, making them highly effective for solar steam generay blending Au@SnO₂ and Ag@SnO₂ nanocomposites, we further improved spectral coverage, thereby maximisbroadens their light absorption range, overcoming the narrow-band limitations of individual metal nanorods. 
+         Additionally, blending Au@SnO₂ and Ag@SnO₂ nanocomposites, we were able to further improve spectral coverage, maximizing solar energy capture. 
+         
+         The SnO₂-coated nanorods exhibited higher heat capacities than their CTAB-stabilized counterparts and pure water, improving thermal energy retention and conversion. Under 1.35 Suns, solar steam generation efficiencies reached 
+         10.87% for SnO₂-coated materials, surpassing the 10.71% and 10.32% efficiencies of uncoated materials and pure water, respectively, within just 30 minutes of solar exposure. These findings highlight the potential of SnO₂ 
+         encapsulation and strategic nanocomposite blending as a promising pathway to advancing solar-driven water purification and energy applications.
+         ''')
         
 # =========================================================================
 #                                       CONTACTS
