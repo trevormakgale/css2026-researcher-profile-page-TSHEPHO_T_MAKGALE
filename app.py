@@ -36,26 +36,6 @@ menu = st.sidebar.radio(
     ["RESEARCH PROFILE", "INTRODUCTION and METHODS", "RESULTS", "PUBLICATIONS", "CONTACTS"],
 )
 
-# Dummy STEM data
-physics_data = pd.DataFrame({
-    "Experiment": ["Alpha Decay", "Beta Decay", "Gamma Ray Analysis", "Quark Study", "Higgs Boson"],
-    "Energy (MeV)": [4.2, 1.5, 2.9, 3.4, 7.1],
-    "Date": pd.date_range(start="2024-01-01", periods=5),
-})
-
-astronomy_data = pd.DataFrame({
-    "Celestial Object": ["Mars", "Venus", "Jupiter", "Saturn", "Moon"],
-    "Brightness (Magnitude)": [-2.0, -4.6, -1.8, 0.2, -12.7],
-    "Observation Date": pd.date_range(start="2024-01-01", periods=5),
-})
-
-weather_data = pd.DataFrame({
-    "City": ["Cape Town", "London", "New York", "Tokyo", "Sydney"],
-    "Temperature (°C)": [25, 10, -3, 15, 30],
-    "Humidity (%)": [65, 70, 55, 80, 50],
-    "Recorded Date": pd.date_range(start="2024-01-01", periods=5),
-})
-
 # =========================================================================
 #                                       FRONT: TITLE PAGE
 # =========================================================================
@@ -172,38 +152,43 @@ elif menu == "RESULTS":
 
     if data_option == "Silver (Ag) Nanocomposites":
         st.write("### Silver (Ag) Nanocomposites")
-        st.dataframe(physics_data)
-        # Add widget to filter by Energy levels
-        energy_filter = st.slider("Filter by Energy (MeV)", 0.0, 10.0, (0.0, 10.0))
-        filtered_physics = physics_data[
-            physics_data["Energy (MeV)"].between(energy_filter[0], energy_filter[1])
-        ]
-        st.write(f"Filtered Results for Energy Range {energy_filter}:")
-        st.dataframe(filtered_physics)
+        st.markdown("**Transmission Electron Micrographs (TEM Images):**")
+        st.image(
+                "AgComposites.png",
+                caption="Nature (Pixabay)")
+
+        st.markdown("**Ultraviolet-Visible spectrographs (UV-VIS Images):**")
+        st.image(
+                "AgComposites_UV.png",
+                caption="Nature (Pixabay)")
+        
+        
 
     elif data_option == "Gold (Au) Nanocomposites":
         st.write("### Gold (Au) Nanocomposites")
-        st.dataframe(astronomy_data)
-        # Add widget to filter by Brightness
-        brightness_filter = st.slider("Filter by Brightness (Magnitude)", -15.0, 5.0, (-15.0, 5.0))
-        filtered_astronomy = astronomy_data[
-            astronomy_data["Brightness (Magnitude)"].between(brightness_filter[0], brightness_filter[1])
-        ]
-        st.write(f"Filtered Results for Brightness Range {brightness_filter}:")
-        st.dataframe(filtered_astronomy)
+        st.markdown("**Transmission Electron Micrographs (TEM Images):**")
+        st.image(
+                "AuComposites.png",
+                caption="Nature (Pixabay)")
+        
+        st.markdown("**Ultraviolet-Visible spectrographs (UV-VIS Images):**")
+        st.image(
+                "AuComposites_UV.png",
+                caption="Nature (Pixabay)")
+        
 
     elif data_option == "Blended Ag-Au Nanocomposites":
         st.write("### Blended Ag-Au Nanocomposites")
-        st.dataframe(weather_data)
-        # Add widgets to filter by temperature and humidity
-        temp_filter = st.slider("Filter by Temperature (°C)", -10.0, 40.0, (-10.0, 40.0))
-        humidity_filter = st.slider("Filter by Humidity (%)", 0, 100, (0, 100))
-        filtered_weather = weather_data[
-            weather_data["Temperature (°C)"].between(temp_filter[0], temp_filter[1]) &
-            weather_data["Humidity (%)"].between(humidity_filter[0], humidity_filter[1])
-        ]
-        st.write(f"Filtered Results for Temperature {temp_filter} and Humidity {humidity_filter}:")
-        st.dataframe(filtered_weather)
+        st.markdown("**Transmission Electron Micrographs (TEM Images):**")
+        st.image(
+                "Ag-AuComposites.png",
+                caption="Nature (Pixabay)")
+        
+        st.markdown("**Ultraviolet-Visible spectrographs (UV-VIS Images):**")
+        st.image(
+                "Ag-AuComposites_UV.png",
+                caption="Nature (Pixabay)")
+         
         
 # =========================================================================
 #                                       CONTACTS
