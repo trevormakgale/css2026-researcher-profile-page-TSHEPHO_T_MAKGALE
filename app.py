@@ -225,7 +225,8 @@ elif menu == "RESULTS and DISCUSSION":
          10.87% for SnO₂-coated materials, surpassing the 10.71% and 10.32% efficiencies of uncoated materials and pure water, respectively, within just 30 minutes of solar exposure. These findings highlight the potential of SnO₂ 
          encapsulation and strategic nanocomposite blending as a promising pathway to advancing solar-driven water purification and energy applications.
          ''')
-        
+        st.markdown("**References:**")
+        st.image("references.png")
 # =========================================================================
 #                                       CONTACTS
 # =========================================================================
@@ -243,6 +244,7 @@ st.markdown("---")
 footer_cols = st.columns(3)
 with footer_cols[0]:
     st.markdown("**CSS-2026 Research Profile| Interactive Research Poster SAIP 2024**")
+    st.image("footer.png")
 with footer_cols[1]:
     st.markdown("© 2026 Coding Summer School 2026")
 with footer_cols[2]:
