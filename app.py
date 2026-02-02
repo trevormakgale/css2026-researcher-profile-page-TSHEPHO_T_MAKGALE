@@ -212,7 +212,7 @@ elif menu == "RESULTS and DISCUSSION":
                 caption="Nature (Pixabay)")
         
         st.write(f'''**Discussion:** 
-                    {Ag_Au_text}''')
+                    {Ag_Ag_text}''')
         
          
         
