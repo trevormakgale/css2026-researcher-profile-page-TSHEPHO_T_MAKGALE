@@ -74,9 +74,7 @@ if menu == "RESEARCH PROFILE":
     st.write(f"**Institution:** {institution}")
     st.markdown("**Department:** Physics")
     
-    st.image(
-    "Solar-Materials.png",
-    caption="Nature (Pixabay)")
+    st.image("Solar-Materials.png")
 
     text = ''' I am a postgraduate researcher in the physical sciences with a strong focus on nanomaterials, photocatalysis, and solar energy conversion. 
     My current research explores carbon-based and plasmonic hybrid nanostructures for applications in photocatalytic hydrogen production, carbon dioxide 
@@ -110,14 +108,10 @@ elif menu == "INTRODUCTION and METHODS":
                     {text}''')
     
     
-    st.image(
-    "Intro.png",
-    caption="Nature (Pixabay)")
+    st.image("Intro.png")
     
     st.markdown("**Methods:**")
-    st.image(
-    "Methods.png",
-    caption="Nature (Pixabay)")
+    st.image("Methods.png")
         
     
 # =========================================================================
@@ -170,14 +164,12 @@ elif menu == "RESULTS and DISCUSSION":
     if data_option == "Silver (Ag) Nanocomposites":
         st.write("### Silver (Ag) Nanocomposites")
         st.markdown("**Transmission Electron Micrographs (TEM Images):**")
-        st.image(
-                "AgComposites.png",
-                caption="Nature (Pixabay)")
+        st.image("AgComposites.png")
 
         st.markdown("**Ultraviolet-Visible spectrographs (UV-VIS Images):**")
         st.image(
                 "AgComposites_UV.png",
-                caption="Nature (Pixabay)")
+                caption="Figure (1)")
         
         st.write(f'''**Discussion:** 
                     {Ag_text}''')
@@ -186,14 +178,12 @@ elif menu == "RESULTS and DISCUSSION":
     elif data_option == "Gold (Au) Nanocomposites":
         st.write("### Gold (Au) Nanocomposites")
         st.markdown("**Transmission Electron Micrographs (TEM Images):**")
-        st.image(
-                "AuComposites.png",
-                caption="Nature (Pixabay)")
+        st.image("AuComposites.png")
         
         st.markdown("**Ultraviolet-Visible spectrographs (UV-VIS Images):**")
         st.image(
                 "AuComposites_UV.png",
-                caption="Nature (Pixabay)")
+                caption="Figure (2)")
         
         st.write(f'''**Discussion:** 
                     {Au_text}''')
@@ -202,14 +192,12 @@ elif menu == "RESULTS and DISCUSSION":
     elif data_option == "Blended Ag-Au Nanocomposites":
         st.write("### Blended Ag-Au Nanocomposites")
         st.markdown("**Transmission Electron Micrographs (TEM Images):**")
-        st.image(
-                "Ag-AuComposites.png",
-                caption="Nature (Pixabay)")
+        st.image("Ag-AuComposites.png")
         
         st.markdown("**Ultraviolet-Visible spectrographs (UV-VIS Images):**")
         st.image(
                 "Ag-AuComposites_UV.png",
-                caption="Nature (Pixabay)")
+                caption="Figure (3)")
         
         st.write(f'''**Discussion:** 
                     {Ag_Ag_text}''')
