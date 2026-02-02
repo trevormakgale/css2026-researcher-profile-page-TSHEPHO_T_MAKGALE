@@ -33,8 +33,25 @@ st.set_page_config(
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["RESEARCH PROFILE", "INTRODUCTION and METHODS", "RESULTS", "PUBLICATIONS", "CONTACTS"],
+    ["RESEARCH PROFILE", "INTRODUCTION and METHODS", "RESULTS and DISCUSSION", "PUBLICATIONS", "CONTACTS"],
 )
+Ag_text = '''
+Figure 1. UV-Vis absorption spectra of CTAB-stabilized (Ag-NRs) and SnO₂-stabilized (Ag-NRs@SnO₂) silver nanorods. Uncoated Ag-NRs exhibit transverse SPR peaks at 412 nm, 411 nm, and 410 nm, with corresponding longitudinal SPR peaks at 548 nm, 549 nm, and 710 nm for samples A, B, and C 
+(aspect ratios: 2.4, 2.8, and 3.3). Coated Ag-NRs@SnO₂ show red-shifted transverse SPR peaks at 452 nm, 453 nm, and 448 nm, with longitudinal SPR peaks at 605 nm, 655 nm, and 715 nm. Heat capacities of SnO₂-stabilized Ag-NRs-water mixtures (25% by volume) were measured at 8797.65, 8134.74, and 8454.38 J/°
+C·Kg, surpassing those of CTAB-stabilized counterparts, which recorded 8045.44, 8004.88, and 7651.65 J/°C·Kg.
+'''
+Au_text = '''
+Figure 2. UV-Vis absorption spectra and thermal capacity measurements of CTAB-stabilized (Au-NRs) and SnO₂-stabilized (Au-NRs@SnO₂) gold nanorods. Uncoated Au-NRs exhibit transverse SPR peaks at 585 nm, 575 nm, and 574 nm, with longitudinal SPR
+peaks at 851 nm (sample A), 810 nm and 860 nm (sample B), and 760 nm, 825 nm, and 865 nm (sample C), corresponding to aspect ratios of 2.2, 2.4, and 2.6. Coated Au-NRs@SnO₂ show blue-shifted transverse SPR peaks at 565 nm, 570 nm, and 549 nm due 
+to size reduction from the SnO₂ coating, with longitudinal SPR peaks at 680, 750, 820, 870, and 920 nm (sample A), 680, 755, 800, and 900 nm (sample B), and 790, 849, and 925 nm (sample C). 
+Heat capacities of SnO₂-stabilized Au-NRs-water mixtures were measured at 7850.58, 8324.08, and 7918.39 J/°C·Kg, surpassing those of CTAB-stabilized counterparts at 7807.70, 8003.29, and 7773.63 J/°C·Kg.
+'''
+
+Ag_Ag_text = '''
+Figure 3. UV-Vis spectra of uncoated and SnO₂-coated materials. The uncoated materials exhibit distinct SPR peaks at 410 nm and 560 nm, highlighting their plasmonic properties, while the SnO₂-coated materials show a broader absorption profile (350–850 nm). 
+The figure also presents the thermal properties of SnO₂-coated and uncoated Ag-Au-NRs-water mixtures, with heat capacities of 7734.12 and 7709.25 J/°C·Kg, respectively. Additionally, Under 1.3511 Suns, solar steam generation efficiencies were found to be 10.87, 10.71, 
+and 10.32 for SnO₂-coated materials, uncoated materials, and pure water, respectively.
+'''
 
 # =========================================================================
 #                                       FRONT: TITLE PAGE
@@ -140,8 +157,8 @@ elif menu == "PUBLICATIONS":
 # =========================================================================
 #                                       RESULTS
 # =========================================================================
-elif menu == "RESULTS":
-    st.title("RESULTS")
+elif menu == "RESULTS and DISCUSSION":
+    st.title("RESULTS and DISCUSSION")
     st.sidebar.header("RESULT Selection")
     
     # Tabbed view for STEM data
@@ -162,6 +179,8 @@ elif menu == "RESULTS":
                 "AgComposites_UV.png",
                 caption="Nature (Pixabay)")
         
+        st.write(f'''**Discussion:** 
+                    {Ag_text}''')
         
 
     elif data_option == "Gold (Au) Nanocomposites":
@@ -176,6 +195,9 @@ elif menu == "RESULTS":
                 "AuComposites_UV.png",
                 caption="Nature (Pixabay)")
         
+        st.write(f'''**Discussion:** 
+                    {Au_text}''')
+        
 
     elif data_option == "Blended Ag-Au Nanocomposites":
         st.write("### Blended Ag-Au Nanocomposites")
@@ -188,6 +210,10 @@ elif menu == "RESULTS":
         st.image(
                 "Ag-AuComposites_UV.png",
                 caption="Nature (Pixabay)")
+        
+        st.write(f'''**Discussion:** 
+                    {Ag_Au_text}''')
+        
          
         
 # =========================================================================
